@@ -603,6 +603,9 @@ header label {
 .links .iconfont {
   font-size: 2em;
 }
+body {
+  background: url("/images/backGround.jpeg");
+}
 .post-wrap {
   position: relative;
   width: 100%;
