@@ -1345,9 +1345,3 @@ body {
 .post-content pre .javascript .function {
   color: #8959a8;
 }
-tbody {
-  background: url("/image/backGround.jpeg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 50% 50%;
-}
