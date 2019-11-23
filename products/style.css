@@ -12,7 +12,7 @@
   padding-right: 15px;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 640px) {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
   }
@@ -62,14 +62,14 @@ container
   -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.06);
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.06);
 }
-/*.fh5co-portfolio > a:hover {
+.fh5co-portfolio > a:hover {
   webkit-box-shadow: 0px 8px 16px -4px rgba(0, 0, 0, 0.13);
   -moz-box-shadow: 0px 8px 16px -4px rgba(0, 0, 0, 0.13);
   box-shadow: 0px 8px 16px -4px rgba(0, 0, 0, 0.13);
 }
 .fh5co-portfolio > a:hover .desc {
   opacity: 1;
-}*/
+}
 .fh5co-portfolio .portfolio-entry {
   width: 100%;
   float: left;
@@ -79,11 +79,11 @@ container
   position: relative;
   height: 200px;
 }
-@media screen and (max-width: 768px) {
+/*@media screen and (max-width: 768px) {
   .fh5co-portfolio .portfolio-entry {
     height: 400px;
   }
-}
+}*/
 .fh5co-portfolio .portfolio-entry .desc {
   position: absolute;
   top: 0;
