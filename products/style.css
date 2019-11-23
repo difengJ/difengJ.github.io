@@ -116,7 +116,7 @@ container
 }
 .fh5co-portfolio .portfolio-text .stuff li {
   list-style: none;
-  display: inline-block;
+/*  display: inline-block;*/
   margin-left: 10px;
   color: rgba(0, 0, 0, 0.3);
   font-size: 16px;
