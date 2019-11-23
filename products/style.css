@@ -12,7 +12,7 @@
   padding-right: 15px;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
   }
@@ -116,7 +116,7 @@ container
 }
 .fh5co-portfolio .portfolio-text .stuff li {
   list-style: none;
-/*  display: inline-block;*/
+  display: inline-block;
   margin-left: 10px;
   color: rgba(0, 0, 0, 0.3);
   font-size: 16px;
