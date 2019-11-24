@@ -123,10 +123,11 @@ container
 .fh5co-portfolio .portfolio-text {
   width: 100%;
   float: left;
-  padding: 20px;
+  padding: 5px;
 }
-.fh5co-portfolio .portfolio-text h3 {
+.fh5co-portfolio .portfolio-text p {
   font-size: 20px;
+  text-align: center;
 }
 .fh5co-portfolio .portfolio-text .stuff {
   margin: 0;
