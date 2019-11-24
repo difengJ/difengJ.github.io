@@ -50,11 +50,11 @@ container
   position: relative;
   height: 200px;
 }
-@media screen and (max-width: 300px) {
+/*@media screen and (max-width: 300px) {
   .fh5co-portfolio .portfolio-entry {
     height: 400px;
   }
-}
+}*/
 .fh5co-portfolio .portfolio-entry .desc {
   position: absolute;
   top: 0;
