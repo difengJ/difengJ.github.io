@@ -90,8 +90,8 @@ container
 .fh5co-portfolio > a:hover .desc {
   opacity: 1;
 }
-.fh5co-portfolio .portfolio-entry {
-  width: 100%;
+.fh5co-portfolio .portfolio-entry .img {
+  width: auto;
   float: left;
   background-size: cover;
   background-position: center center;
