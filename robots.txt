@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /about/
+Allow: /products/
+Allow: /archives/
+
+Sitemap: https://yunqibao.club/sitemap.xml
+Sitemap: https://yunqibao.club/baidusitemap.xml
