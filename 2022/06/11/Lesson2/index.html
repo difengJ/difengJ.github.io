@@ -20,21 +20,21 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="解决方案">
+  <meta name="description" content="课程 2: Storage Factory💻 代码: https:&#x2F;&#x2F;github.com&#x2F;PatrickAlphaC&#x2F;storage_factory  Factory Pattern 工厂模式 Imports导入 通过合约创建合约  与部署合约交互 Recap  新建一个SimpleStorageFactory.sol文件，确保和之前创建的SimpleStorage.sol处于同一目录。使用i">
 <meta property="og:type" content="article">
-<meta property="og:title" content="The transaction declared chain ID 5777, but the connected node is on 1337">
-<meta property="og:url" content="http://example.com/2022/06/10/1337/index.html">
+<meta property="og:title" content="终极Solidity、区块链和智能合约课程（2）">
+<meta property="og:url" content="http://example.com/2022/06/11/Lesson2/index.html">
 <meta property="og:site_name" content="DFXX">
-<meta property="og:description" content="解决方案">
+<meta property="og:description" content="课程 2: Storage Factory💻 代码: https:&#x2F;&#x2F;github.com&#x2F;PatrickAlphaC&#x2F;storage_factory  Factory Pattern 工厂模式 Imports导入 通过合约创建合约  与部署合约交互 Recap  新建一个SimpleStorageFactory.sol文件，确保和之前创建的SimpleStorage.sol处于同一目录。使用i">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-06-10T09:22:33.000Z">
-<meta property="article:modified_time" content="2022-06-11T05:54:31.326Z">
+<meta property="article:published_time" content="2022-06-11T09:22:33.000Z">
+<meta property="article:modified_time" content="2022-06-11T06:29:10.706Z">
 <meta property="article:author" content="DelliboviDonte">
 <meta property="article:tag" content="Solidity">
 <meta property="article:tag" content="Blockchain">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2022/06/10/1337/">
+<link rel="canonical" href="http://example.com/2022/06/11/Lesson2/">
 
 
 <script id="page-configurations">
@@ -47,7 +47,7 @@
   };
 </script>
 
-  <title>The transaction declared chain ID 5777, but the connected node is on 1337 | DFXX</title>
+  <title>终极Solidity、区块链和智能合约课程（2） | DFXX</title>
   
 
 
@@ -152,7 +152,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/10/1337/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/11/Lesson2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -165,7 +165,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          The transaction declared chain ID 5777, but the connected node is on 1337
+          终极Solidity、区块链和智能合约课程（2）
         </h1>
 
         <div class="post-meta">
@@ -174,16 +174,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2022-06-10 17:22:33" itemprop="dateCreated datePublished" datetime="2022-06-10T17:22:33+08:00">2022-06-10</time>
+              <time title="Created: 2022-06-11 17:22:33 / Modified: 14:29:10" itemprop="dateCreated datePublished" datetime="2022-06-11T17:22:33+08:00">2022-06-11</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-06-11 13:54:31" itemprop="dateModified" datetime="2022-06-11T13:54:31+08:00">2022-06-11</time>
-              </span>
 
           
 
@@ -196,8 +190,28 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/70731492/the-transaction-declared-chain-id-5777-but-the-connected-node-is-on-1337">解决方案</a></p>
+        <h1 id="课程-2-Storage-Factory"><a href="#课程-2-Storage-Factory" class="headerlink" title="课程 2: Storage Factory"></a>课程 2: <a target="_blank" rel="noopener" href="https://github.com/PatrickAlphaC/storage_factory">Storage Factory</a></h1><p>💻 代码: <a target="_blank" rel="noopener" href="https://github.com/PatrickAlphaC/storage_factory">https://github.com/PatrickAlphaC/storage_factory</a></p>
+<ul>
+<li>Factory Pattern 工厂模式</li>
+<li>Imports导入</li>
+<li>通过合约创建合约 </li>
+<li>与部署合约交互</li>
+<li>Recap</li>
+</ul>
+<p>新建一个SimpleStorageFactory.sol文件，确保和之前创建的SimpleStorage.sol处于同一目录。<br>使用import导入SimpleStorage.sol</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &quot;./SimpleStorage.sol&quot;;</span><br></pre></td></tr></table></figure>
 
+<p>通过合约来创建合约</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">contract StorageFactory&#123;</span><br><span class="line">    function createSimpleStorageContract() public &#123;</span><br><span class="line">        SimpleStorage simpleStorage = new SimpleStorage();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意SimpleStorage和simpleStorage大小写。第一个是变量类型，第二个是变量名称。使用new关键字创建一个合约。</p>
+<p>下一步：我们使用一个array来储存新建的合约。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">contract StorageFactory&#123;</span><br><span class="line"></span><br><span class="line">    SimpleStorage[] public SimpleStorageArray;</span><br><span class="line"></span><br><span class="line">    function createSimpleStorageContract() public &#123;</span><br><span class="line">        SimpleStorage simpleStorage = new SimpleStorage();</span><br><span class="line">        SimpleStorageArray.push()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>下一步：我们与新建的合约交互。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">contract StorageFactory&#123;</span><br><span class="line"></span><br><span class="line">    SimpleStorage[] public SimpleStorageArray;</span><br><span class="line"></span><br><span class="line">    function createSimpleStorageContract() public &#123;</span><br><span class="line">        SimpleStorage simpleStorage = new SimpleStorage();</span><br><span class="line">        SimpleStorageArray.push();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    function sfStore(uint256 _SimpleStorageIndex, uint256 _SimpleStorageFavoriateNumber ) public &#123;</span><br><span class="line">        SimpleStorage(address(SimpleStorageArray[_SimpleStorageIndex])).store(_SimpleStorageFavoriateNumber);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    function sfGet(uint256 _SimpleStorageIndex) view public returns (uint256) &#123;</span><br><span class="line">        return  SimpleStorage(address(SimpleStorageArray[_SimpleStorageIndex])).retrieve();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>下一步：学习继承Inherit，简单的用is就可以继承其他合约</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">contract StorageFactory is SimpleStorage&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -215,10 +229,13 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2022/06/11/Lesson3/" rel="next" title="终极Solidity、区块链和智能合约课程（3）">
-      终极Solidity、区块链和智能合约课程（3） <i class="fa fa-chevron-right"></i>
+    <a href="/2022/06/11/Lesson3/" rel="prev" title="终极Solidity、区块链和智能合约课程（3）">
+      <i class="fa fa-chevron-left"></i> 终极Solidity、区块链和智能合约课程（3）
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/06/11/Lesson1/" rel="next" title="终极Solidity、区块链和智能合约课程（1）">
+      终极Solidity、区块链和智能合约课程（1） <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -278,6 +295,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%BE%E7%A8%8B-2-Storage-Factory"><span class="nav-number">1.</span> <span class="nav-text">课程 2: Storage Factory</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
