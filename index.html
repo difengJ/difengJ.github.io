@@ -145,111 +145,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/11/Lesson1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="DelliboviDonte">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DFXX">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/06/11/Lesson1/" class="post-title-link" itemprop="url">终极Solidity、区块链和智能合约课程（1）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2022-06-11 17:22:33 / Modified: 14:29:01" itemprop="dateCreated datePublished" datetime="2022-06-11T17:22:33+08:00">2022-06-11</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>欢迎来到终极Solidity、区块链和智能合约课程 - 初学者到专家完整课程 | Python版！<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=M576WGiDBdQ">油管视频</a></p>
-<h1 id="课程-1-欢迎认识Remix-Simple-Storage"><a href="#课程-1-欢迎认识Remix-Simple-Storage" class="headerlink" title="课程 1: 欢迎认识Remix! Simple Storage"></a>课程 1: <a target="_blank" rel="noopener" href="https://github.com/PatrickAlphaC/simple_storage">欢迎认识Remix! Simple Storage</a></h1><p>💻 代码: <a target="_blank" rel="noopener" href="https://github.com/PatrickAlphaC/simple_storage">https://github.com/PatrickAlphaC/simple_storage</a></p>
-<h3 id="这里的详细内容都可以参考Solidity文档"><a href="#这里的详细内容都可以参考Solidity文档" class="headerlink" title="这里的详细内容都可以参考Solidity文档"></a>这里的详细内容都可以参考<a target="_blank" rel="noopener" href="https://docs.soliditylang.org/en/v0.8.6/index.html">Solidity文档</a></h3><h3 id="Remix"><a href="#Remix" class="headerlink" title="Remix"></a><a target="_blank" rel="noopener" href="https://remix.ethereum.org/">Remix</a></h3><h3 id="Solidity-基础知识"><a href="#Solidity-基础知识" class="headerlink" title="Solidity 基础知识"></a>Solidity 基础知识</h3><ul>
-<li>版本<br>  <code>pragma solidity ^0.8.7;</code>表示不能用低于0.8.7版本的编译器编译，也不能用0.9.0版本及以上版本的编译器编译<br>  <code>pragma solidity &gt;=0.4.0 &lt;0.6.0;</code> 表示代码是为0.4.0及以上版本编写的，但不包括version 0.6.0及以上版本</li>
-<li>编译</li>
-<li>声明智能合约<br>  <code>contract SimpleStorage&#123;&#125;</code></li>
-<li><a target="_blank" rel="noopener" href="https://docs.soliditylang.org/en/v0.8.6/types.html">类型 &amp; 变量声明</a><ul>
-<li><code>uint256</code>, <code>int256</code>, <code>bool</code>, <code>string</code>, <code>address</code>, <code>bytes32</code><br>比如<code>uint256 favoriteNumber</code>,<code>bool favoriteBool</code></li>
-</ul>
-</li>
-<li>默认初始化<br>  <code>uint256 favoriteNumber</code> 默认初始指为0</li>
-<li>注释<br>  使用<code>//</code>表示注释</li>
-<li>智能合约方法<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">contract SimpleStorage&#123;</span><br><span class="line">    uint256 favoriteNumber;</span><br><span class="line">    // 定义一个store方法</span><br><span class="line">    function store(uint256 _favoriteNumber) public &#123;</span><br><span class="line">        favoriteNumber = _favoriteNumber;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>部署一个合约</li>
-<li>调用一个公开状态变化方法</li>
-<li><a target="_blank" rel="noopener" href="https://docs.soliditylang.org/en/v0.7.3/contracts.html#visibility-and-getters">可见性</a><ul>
-<li>external</li>
-<li>public </li>
-<li>internal </li>
-<li>private</li>
-</ul>
-</li>
-<li>变量作用域<br>  在一个方法里定义的变量不能在其他方法中使用。</li>
-<li>View &amp; Pure 方法  <ul>
-<li>patrick说这个后面会详细讲，不懂就先了解下哈</li>
-<li>View(视图)函数不会修改状态。</li>
-<li>Pure(纯)函数不读取或修改状态。</li>
-</ul>
-</li>
-<li>结构体<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">contract SimpleStorage&#123;</span><br><span class="line">    uint256 favoriteNumber;</span><br><span class="line">    // 定义一个结构体</span><br><span class="line">    struct People&#123;</span><br><span class="line">        uint256 favoriteNumber;</span><br><span class="line">        string name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>介绍储存</li>
-<li>数组 - 动态 &amp; 固定 大小<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">contract SimpleStorage&#123;</span><br><span class="line">    uint256 favoriteNumber;</span><br><span class="line">    // 定义一个结构体</span><br><span class="line">    struct People&#123;</span><br><span class="line">        uint256 favoriteNumber;</span><br><span class="line">        string name;</span><br><span class="line">    &#125;</span><br><span class="line">    People[] PeopleArray;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>编译错误和警告</li>
-<li>Memory关键字<br>  在solidity中有两种方式储存数据：memory和storage<ul>
-<li>memory：只有在执行方法中会存储</li>
-<li>storage：在方法执行后，变量会一直储存着。</li>
-</ul>
-</li>
-<li>映射<br>  mapping,就类似python中的dict。比如我们要把用户和用户喜欢的数字对应起来。可以定义<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">contract SimpleStorage&#123;</span><br><span class="line">    uint256 favoriteNumber;</span><br><span class="line">    // 定义一个结构体</span><br><span class="line">    struct People&#123;</span><br><span class="line">        uint256 favoriteNumber;</span><br><span class="line">        string name;</span><br><span class="line">    &#125;</span><br><span class="line">    People[] PeopleArray;</span><br><span class="line"></span><br><span class="line">    mapping(string =&gt; uint256) public nameToFavoriteNumber;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>SPDX License</li>
-<li>Recap<h3 id="部署到“主”网"><a href="#部署到“主”网" class="headerlink" title="部署到“主”网"></a>部署到“主”网</h3></li>
-<li>测试网&#x2F;主网</li>
-<li><a target="_blank" rel="noopener" href="https://docs.chain.link/docs/link-token-contracts/#rinkeby">找到水龙头</a></li>
-<li>连接metamask</li>
-<li>与部署的合约交互</li>
-<li>The EVM 以太坊虚拟机器</li>
-</ul>
-<h3 id="练习重新写SimpleStorage"><a href="#练习重新写SimpleStorage" class="headerlink" title="练习重新写SimpleStorage"></a>练习重新写SimpleStorage</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">contract SimpleStorage&#123;</span><br><span class="line">    uint256 favoriteNumber;</span><br><span class="line">    // 定义一个结构体</span><br><span class="line">    struct People&#123;</span><br><span class="line">        uint256 favoriteNumber;</span><br><span class="line">        string name;</span><br><span class="line">    &#125;</span><br><span class="line">    People[] PeopleArray;</span><br><span class="line"></span><br><span class="line">    mapping(string =&gt; uint256) public nameToFavoriteNumber;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    function store(uint256 _favoriteNumber) public &#123;</span><br><span class="line">        favoriteNumber = _favoriteNumber;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    function retrieve() view public returns(uint256) &#123;</span><br><span class="line">        return favoriteNumber;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    function addPeople(string memory _name,uint256 _favoriteNumber) public &#123;</span><br><span class="line">        PeopleArray.push(People&#123;_favoriteNumber,_name&#125;);</span><br><span class="line">        nameToFavoriteNumber[_name] = _favoriteNumber;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/11/Lesson2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -275,7 +170,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2022-06-11 17:22:33 / Modified: 14:29:10" itemprop="dateCreated datePublished" datetime="2022-06-11T17:22:33+08:00">2022-06-11</time>
+              <time title="Created: 2022-06-11 17:22:33 / Modified: 14:32:52" itemprop="dateCreated datePublished" datetime="2022-06-11T17:22:33+08:00">2022-06-11</time>
             </span>
 
           
@@ -303,14 +198,92 @@
 <p>通过合约来创建合约</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">contract StorageFactory&#123;</span><br><span class="line">    function createSimpleStorageContract() public &#123;</span><br><span class="line">        SimpleStorage simpleStorage = new SimpleStorage();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>注意SimpleStorage和simpleStorage大小写。第一个是变量类型，第二个是变量名称。使用new关键字创建一个合约。</p>
-<p>下一步：我们使用一个array来储存新建的合约。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">contract StorageFactory&#123;</span><br><span class="line"></span><br><span class="line">    SimpleStorage[] public SimpleStorageArray;</span><br><span class="line"></span><br><span class="line">    function createSimpleStorageContract() public &#123;</span><br><span class="line">        SimpleStorage simpleStorage = new SimpleStorage();</span><br><span class="line">        SimpleStorageArray.push()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/06/11/Lesson2/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
 
-<p>下一步：我们与新建的合约交互。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">contract StorageFactory&#123;</span><br><span class="line"></span><br><span class="line">    SimpleStorage[] public SimpleStorageArray;</span><br><span class="line"></span><br><span class="line">    function createSimpleStorageContract() public &#123;</span><br><span class="line">        SimpleStorage simpleStorage = new SimpleStorage();</span><br><span class="line">        SimpleStorageArray.push();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    function sfStore(uint256 _SimpleStorageIndex, uint256 _SimpleStorageFavoriateNumber ) public &#123;</span><br><span class="line">        SimpleStorage(address(SimpleStorageArray[_SimpleStorageIndex])).store(_SimpleStorageFavoriateNumber);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    function sfGet(uint256 _SimpleStorageIndex) view public returns (uint256) &#123;</span><br><span class="line">        return  SimpleStorage(address(SimpleStorageArray[_SimpleStorageIndex])).retrieve();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
 
-<p>下一步：学习继承Inherit，简单的用is就可以继承其他合约</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">contract StorageFactory is SimpleStorage&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/11/Lesson1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DelliboviDonte">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DFXX">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/06/11/Lesson1/" class="post-title-link" itemprop="url">终极Solidity、区块链和智能合约课程（1）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2022-06-11 17:22:33 / Modified: 14:32:17" itemprop="dateCreated datePublished" datetime="2022-06-11T17:22:33+08:00">2022-06-11</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>欢迎来到终极Solidity、区块链和智能合约课程 - 初学者到专家完整课程 | Python版！<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=M576WGiDBdQ">油管视频</a></p>
+<h1 id="课程-1-欢迎认识Remix-Simple-Storage"><a href="#课程-1-欢迎认识Remix-Simple-Storage" class="headerlink" title="课程 1: 欢迎认识Remix! Simple Storage"></a>课程 1: <a target="_blank" rel="noopener" href="https://github.com/PatrickAlphaC/simple_storage">欢迎认识Remix! Simple Storage</a></h1><p>💻 代码: <a target="_blank" rel="noopener" href="https://github.com/PatrickAlphaC/simple_storage">https://github.com/PatrickAlphaC/simple_storage</a></p>
+<h3 id="这里的详细内容都可以参考Solidity文档"><a href="#这里的详细内容都可以参考Solidity文档" class="headerlink" title="这里的详细内容都可以参考Solidity文档"></a>这里的详细内容都可以参考<a target="_blank" rel="noopener" href="https://docs.soliditylang.org/en/v0.8.6/index.html">Solidity文档</a></h3><h3 id="Remix"><a href="#Remix" class="headerlink" title="Remix"></a><a target="_blank" rel="noopener" href="https://remix.ethereum.org/">Remix</a></h3><h3 id="Solidity-基础知识"><a href="#Solidity-基础知识" class="headerlink" title="Solidity 基础知识"></a>Solidity 基础知识</h3><ul>
+<li>版本<br>  <code>pragma solidity ^0.8.7;</code>表示不能用低于0.8.7版本的编译器编译，也不能用0.9.0版本及以上版本的编译器编译<br>  <code>pragma solidity &gt;=0.4.0 &lt;0.6.0;</code> 表示代码是为0.4.0及以上版本编写的，但不包括version 0.6.0及以上版本</li>
+<li>编译</li>
+<li>声明智能合约<br>  <code>contract SimpleStorage&#123;&#125;</code></li>
+<li><a target="_blank" rel="noopener" href="https://docs.soliditylang.org/en/v0.8.6/types.html">类型 &amp; 变量声明</a><ul>
+<li><code>uint256</code>, <code>int256</code>, <code>bool</code>, <code>string</code>, <code>address</code>, <code>bytes32</code><br>比如<code>uint256 favoriteNumber</code>,<code>bool favoriteBool</code></li>
+</ul>
+</li>
+<li>默认初始化<br>  <code>uint256 favoriteNumber</code> 默认初始指为0</li>
+<li>注释<br>  使用<code>//</code>表示注释</li>
+<li>智能合约方法<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">contract SimpleStorage&#123;</span><br><span class="line">    uint256 favoriteNumber;</span><br><span class="line">    // 定义一个store方法</span><br><span class="line">    function store(uint256 _favoriteNumber) public &#123;</span><br><span class="line">        favoriteNumber = _favoriteNumber;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/06/11/Lesson1/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -354,7 +327,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2022-06-11 17:22:33 / Modified: 14:29:17" itemprop="dateCreated datePublished" datetime="2022-06-11T17:22:33+08:00">2022-06-11</time>
+              <time title="Created: 2022-06-11 17:22:33 / Modified: 14:33:07" itemprop="dateCreated datePublished" datetime="2022-06-11T17:22:33+08:00">2022-06-11</time>
             </span>
 
           
@@ -379,55 +352,15 @@
 </ul>
 </li>
 <li><a target="_blank" rel="noopener" href="https://data.chain.link/">data.chain.link</a></li>
-<li>通过Chainlink预言机获取外部数据<ul>
-<li><a target="_blank" rel="noopener" href="https://docs.chain.link/">Chainlink</a></li>
-<li><a target="_blank" rel="noopener" href="https://docs.chain.link/docs/link-token-contracts/">水龙头和合约地址</a><ul>
-<li><a target="_blank" rel="noopener" href="https://docs.chain.link/docs/link-token-contracts/#kovan">Kovan</a></li>
-</ul>
-</li>
-<li><a target="_blank" rel="noopener" href="https://docs.chain.link/docs/get-the-latest-price/">获得token价格</a><h3 id="Importing-from-NPM-and-Advanced-Solidity"><a href="#Importing-from-NPM-and-Advanced-Solidity" class="headerlink" title="Importing from NPM and Advanced Solidity"></a>Importing from NPM and Advanced Solidity</h3></li>
-</ul>
-</li>
-<li>Decimals&#x2F;Floating Point Numbers in Solidity</li>
-<li>latestRoundData</li>
-<li>Importing from NPM  in Remix</li>
-<li>Interfaces<ul>
-<li>Introduction to ABIs</li>
-</ul>
-</li>
-<li><a target="_blank" rel="noopener" href="https://docs.chain.link/docs/reference-contracts/">Getting Price Feed Addresses</a></li>
-<li>getPrice</li>
-<li>Tuples<ul>
-<li>Unused Tuple Variables</li>
-</ul>
-</li>
-<li>Matching Units (WEI&#x2F;GWEI&#x2F;ETH)</li>
-<li>getConversionRate</li>
-<li>Matching Units (Continued)</li>
-<li>SafeMath &amp; Integer Overflow<ul>
-<li>using keyword</li>
-<li><a target="_blank" rel="noopener" href="https://docs.soliditylang.org/en/v0.8.6/contracts.html#libraries">Libraries</a></li>
-<li>SafeMath PSA</li>
-</ul>
-</li>
-<li>Setting a Threshold</li>
-<li>Require<br>require(msg.sender &#x3D;&#x3D; owner), 如果不符合要求，tx就会被退回。</li>
-<li>Revert</li>
-<li>Withdraw Function </li>
-<li>Transfer</li>
-<li>Balance</li>
-<li>this<br>this是solidity中的关键字，表示当前这个合约</li>
-<li>Contract Owners</li>
-<li>Constructor<br>在合约被创建的时候，会自动调用这个函数。</li>
-<li>&#x3D;&#x3D;</li>
-<li>Modifiers<br>函数修改器。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">modifier onlyOwner &#123;</span><br><span class="line">  require(msg.sender == owner);</span><br><span class="line">  _;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function withdraw() public view onlyOwner &#123;</span><br><span class="line">  msg.sender.tranfer(address(this).balance);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-<li>Resetting</li>
-<li>for loop</li>
-<li>Array Length<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">address[] funders;</span><br><span class="line"></span><br><span class="line">for (uint256 funderIndex = 0; funderIndex &lt; funders.length;funderIndex++ )&#123;</span><br><span class="line">  address funder = funders[funderIndex];</span><br><span class="line">  addressToFundAmount[funder] = 0;</span><br><span class="line">&#125;</span><br><span class="line">// 将funders变量重置</span><br><span class="line">funders = new address[](0);</span><br></pre></td></tr></table></figure></li>
-<li>Forcing a Transaction</li>
-<li>Recap</li>
-</ul>
-
+<li>通过Chainlink预言机获取外部数据
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/06/11/Lesson3/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
