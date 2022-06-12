@@ -145,6 +145,148 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/12/Lesson4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DelliboviDonte">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DFXX">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/06/12/Lesson4/" class="post-title-link" itemprop="url">终极Solidity、区块链和智能合约课程（4）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2022-06-12 12:37:22 / Modified: 12:52:30" itemprop="dateCreated datePublished" datetime="2022-06-12T12:37:22+08:00">2022-06-12</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Lesson-4-Web3-py-Simple-Storage"><a href="#Lesson-4-Web3-py-Simple-Storage" class="headerlink" title="Lesson 4: Web3.py Simple Storage"></a>Lesson 4: <a target="_blank" rel="noopener" href="https://github.com/PatrickAlphaC/web3_py_simple_storage">Web3.py Simple Storage</a></h1><p>💻 Code: <a target="_blank" rel="noopener" href="https://github.com/PatrickAlphaC/web3_py_simple_storage">https://github.com/PatrickAlphaC/web3_py_simple_storage</a></p>
+<h3 id="Installing-VSCode-Python-and-Web3"><a href="#Installing-VSCode-Python-and-Web3" class="headerlink" title="Installing VSCode, Python, and Web3"></a>Installing VSCode, Python, and Web3</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://chain.link/bootcamp/brownie-setup-instructions">安装(metamask, vscode, python, nodejs..)</a></li>
+<li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/download">VSCode</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=WPqXP_kLzpo">VSCode学习视频</a><h3 id="使用Web3-py库部署智能合约"><a href="#使用Web3-py库部署智能合约" class="headerlink" title="使用Web3.py库部署智能合约"></a>使用Web3.py库部署智能合约</h3></li>
+<li>Reading our solidity file</li>
+<li>Running a Python Script in the Terminal</li>
+<li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf">MaxOS Shortcuts</a></li>
+<li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf">Windows Shortcuts</a></li>
+<li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf">Linux Shortcuts</a></li>
+<li>Compiling in Python</li>
+<li><a target="_blank" rel="noopener" href="https://pypi.org/project/py-solc-x/">py-solc-x</a><ul>
+<li>compile_standard</li>
+</ul>
+</li>
+<li>Colorized Brackets</li>
+<li>JSON ABI </li>
+<li>Saving Compiled Code</li>
+<li>Formatting JSON</li>
+<li>Deploying in Python<ol>
+<li>Get Bytecode</li>
+<li>Get ABI</li>
+<li>Choose Blockchain to Deploy To</li>
+</ol>
+<ul>
+<li>Local Ganache Chain<ul>
+<li><a target="_blank" rel="noopener" href="https://www.trufflesuite.com/ganache">Ganache UI</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/trufflesuite/ganache-cli">Ganache Command Line</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://web3py.readthedocs.io/en/stable/">Web3.py</a></li>
+<li>HTTP &#x2F; RPC Provider</li>
+<li>Private Keys MUST start with “0x”</li>
+<li>Contract Object</li>
+<li>Building a Transaction</li>
+<li>Account Nonce </li>
+<li>Calling “Constructor”</li>
+<li>Transaction Parameters</li>
+<li>Signing the Transaction</li>
+<li>NEVER put your private key directly in your code</li>
+<li><a target="_blank" rel="noopener" href="https://www.twilio.com/blog/2017/01/how-to-set-environment-variables.html">Setting Environment Variables (Windows, Linux, MacOS)</a><ul>
+<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=tqWDiu8a4gc&t=40s">More on Windows Environment Variables</a></li>
+</ul>
+</li>
+<li>Exported Environment Variables Only Last the Duration of the Shell&#x2F;Terminal</li>
+<li>Private Key PSA</li>
+<li>.env file</li>
+<li>.gitignore</li>
+<li>Loading .env File in Python<ul>
+<li><a target="_blank" rel="noopener" href="https://pypi.org/project/python-dotenv/">python-dotenv</a></li>
+</ul>
+</li>
+<li>Viewing our Transaction &#x2F; Deployment in Ganache</li>
+<li>Waiting for Block Confirmations<h3 id="Interacting-with-Our-Contract-in-Python-amp-Web3-py"><a href="#Interacting-with-Our-Contract-in-Python-amp-Web3-py" class="headerlink" title="Interacting with Our Contract in Python &amp; Web3.py"></a>Interacting with Our Contract in Python &amp; Web3.py</h3></li>
+<li>2 Things you always need<ol>
+<li>Contract Address</li>
+<li>Contract ABI</li>
+</ol>
+</li>
+<li>Getting address from transaction receipt</li>
+<li>Calling a view function with web3.py<ul>
+<li>Call vs Transact</li>
+</ul>
+</li>
+<li>Updating State with Web3.py</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/trufflesuite/ganache-cli">ganache-cli</a><ul>
+<li>Installing Ganache<ul>
+<li><a target="_blank" rel="noopener" href="https://nodejs.org/en/">Install Nodejs</a></li>
+<li><a target="_blank" rel="noopener" href="https://classic.yarnpkg.com/en/docs/install">Install Yarn</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Working with ganache-cli</li>
+<li>Open a new terminal in the same window</li>
+<li>Deploying to a testnet</li>
+<li><a target="_blank" rel="noopener" href="https://infura.io/">Infura</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.alchemy.com/">Alchemy</a></li>
+<li>Using Infura RPC URL &#x2F; HTTP Provider</li>
+<li><a target="_blank" rel="noopener" href="https://chainlist.org/">Chain Ids</a></li>
+<li>Wow this seems like a lot of work… Is there a better way?</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/11/Lesson3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -524,7 +666,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
