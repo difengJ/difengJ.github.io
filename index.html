@@ -176,7 +176,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-10-08 13:42:21" itemprop="dateModified" datetime="2022-10-08T13:42:21+08:00">2022-10-08</time>
+                <time title="Modified: 2022-10-08 13:44:10" itemprop="dateModified" datetime="2022-10-08T13:44:10+08:00">2022-10-08</time>
               </span>
 
           
@@ -208,32 +208,14 @@
 <li>Privacy：你需要我提供是否有大于5000的余额，我就只提供这个信息。暴露出最少的信息 </li>
 <li>Compatibilty:兼容现有的web2.0的现有API</li>
 </ul>
-<h3 id="DECO怎么实现的"><a href="#DECO怎么实现的" class="headerlink" title="DECO怎么实现的"></a>DECO怎么实现的</h3><p><img src="https://i.imgur.com/p97Swzs.jpg" alt="Screen Shot 2022-10-07 at 12.55.18"><br>DECO是涉及三方交互，包括：</p>
-<ul>
-<li>Web server：数据源，比如你的银行余额，你的信用分数。用Jane Doe的例子就是银行</li>
-<li>Prover: 完成认证，签名，登陆。与Web serve 交互的。用Jane Doe的例子就是Jane</li>
-<li>Verifier：DECO Oracle 它知道两样东西：1）Prover从哪里获得信息 2）加密的Prover 和 Web server 之间的交互信息</li>
-</ul>
-<p>现在我们去掉Web server这个点，来看Verifier和Prover的两者之间的关系。<br>分两种情况来看：</p>
-<ol>
-<li>信息不涉及敏感数据：<br>很多情况下，数据并不是敏感的，我们只是要确认数据的真实性。比如要证明自己拥有某一个社交账户。</li>
-</ol>
-<p><img src="https://i.imgur.com/lZdA5Iq.jpg" alt="Screen Shot 2022-10-07 at 21.18.41"></p>
-<p>从图中可以看到，Prover可以将私钥给到Verifier，用来解密。其实这样就可以解锁很多的场景。</p>
-<ol start="2">
-<li>信息涉及敏感数据</li>
-</ol>
-<p>DECO利用零知识证明技术:证明者（prover）有可能在不透露具体数据的情况下让验证者（verifier）相信数据的真实性。</p>
-<p>Jane不需要透露自己使用哪一家银行，不透露自己实际的银行余额，只声明自己的余额超过5000刀</p>
-<p><img src="https://i.imgur.com/o7u9eUX.jpg" alt="Screen Shot 2022-10-08 at 12.57.36"></p>
-<p>从图中可以看到,Prover和Verifier看到的信息的区别。在Verifier这里，其他的信息都被隐去，只显示余额超过5000 USD。</p>
-<h3 id="DECO研究过程"><a href="#DECO研究过程" class="headerlink" title="DECO研究过程"></a>DECO研究过程</h3><p>基于论文<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1909.00938.pdf">DECO: Liberating Web Data Using Decentralized Oracles for TLS</a>，经过两年的开发,DECO有了初步雏形。有兴趣的同学可以通过这篇论文更深入地了解DECO。</p>
-<p>DECO零知识证明和SNARK或者STARK这类零知识不同。DECO的零知识证明是针对特定的verifier的零知识证明，具有快速，提供数据出处。</p>
-<h3 id="DECO的未来可能"><a href="#DECO的未来可能" class="headerlink" title="DECO的未来可能"></a>DECO的未来可能</h3><p>DECO是目前Chainlink正在开发的基于零知识证明技术的预言机解决方案，也是Chainlink网络的安全链下计算套件中的一个隐私保护预言机协议。DECO在HTTPS&#x2F;TLS协议基础上进行了扩展（注：HTTPS&#x2F;TLS是互联网最常用的数据传输协议），保障数据从各个隐私和付费数据源传输过程中的隐私性和防篡改性。DECO可以与现代TLS版本兼容，无需使用可信硬件，并且可向后兼容，服务器端无需修改。因此，使用DECO的Chainlink预言机节点可以证明数据来自可信服务器，并在链上隐藏数据内容。另外，由于维护了TLS托管链，因此还可以证明数据源。</p>
-<p>DECO等零知识证明方案可以实现一系列智能合约应用场景，其中包括低抵押贷款（undercollateralized loans）。在低抵押贷款中，贷款人既可以证明自己的信贷资质，又可以保护自己的隐私。具体而言，贷款人可以基于权威网站上的记录生成信贷资质，并隐藏姓名、地址或信用分数等敏感信息（注：只显示信用分数是否超过某一阈值)。</p>
-<p>DECO还可以用来创建去中心化身份认证（DID）协议，比如CanDID用户可以拥有并保管自己的身份认证信息，而不是让中心化的第三方托管这些信息。这些身份认证信息由名为“issuer”的机构签名，这些权威机构可以将用户与公民身份、职业和教育背景等身份信息挂钩。DECO可以让现有web服务器成为issuer，为账户提供秘钥共享管理功能，并基于社保卡号等确定性的独特身份认证实现隐私版的抗女巫攻击功能。</p>
-<p>最后，DECO等零知识证明方案不仅可以为用户带来价值，还能让传统机构和数据提供商将其专有的敏感数据变现，并充分保障数据隐私。最终只在链上公布零知识证明的证明结果，而数据内容不会直接公布在链上。这为数据提供商打开了新的市场。数据提供商可以变现数据并提高收入，并同时充分保障数据隐私。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/10/07/DECO/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
