@@ -51,7 +51,20 @@
     lang   : 'en'
   };
 </script>
-
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
+#needsharebutton-postbottom {
+  cursor: pointer;
+  height: 26px;
+  margin-top: 10px;
+  position: relative;
+}
+#needsharebutton-postbottom .btn {
+  border: 1px solid $btn-default-border-color;
+  border-radius: 3px;
+  display: initial;
+  padding: 1px 4px;
+}
+</style>
   <title>Smartcon Chainlink DECO总结 | DFXX</title>
   
 
@@ -252,7 +265,13 @@
 
     
     
-    
+    <div class="post-widgets">
+      <div id="needsharebutton-postbottom">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
 
       <footer class="post-footer">
           <div class="post-tags">
@@ -270,8 +289,8 @@
       <i class="fa fa-chevron-left"></i> 终极Solidity、区块链和智能合约课程（5）
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/11/20/Real-estate-tokenize/" rel="next" title="Real_estate_tokenize">
-      Real_estate_tokenize <i class="fa fa-chevron-right"></i>
+    <a href="/2022/11/20/Real-estate-tokenize/" rel="next" title="Real Estate Tokenization">
+      Real Estate Tokenization <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -345,7 +364,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -437,5 +456,14 @@
 
   
 
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
+  <script>
+      pbOptions = {};
+        pbOptions.iconStyle = "box";
+        pbOptions.boxForm = "horizontal";
+        pbOptions.position = "bottomCenter";
+        pbOptions.networks = "Wechat,QQZone,Weibo,Douban,Twitter,Facebook";
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+  </script>
 </body>
 </html>
