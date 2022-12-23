@@ -172,7 +172,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/12/23/SmartContract-automation/" class="post-title-link" itemprop="url">smartContractAutomation</a>
+            <a href="/2022/12/23/SmartContract-automation/" class="post-title-link" itemprop="url">智能合约函数的自动化执行</a>
         </h2>
 
         <div class="post-meta">
@@ -183,7 +183,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2022-12-23 15:58:47 / Modified: 22:55:23" itemprop="dateCreated datePublished" datetime="2022-12-23T15:58:47+08:00">2022-12-23</time>
+              <time title="Created: 2022-12-23 15:58:47 / Modified: 23:01:58" itemprop="dateCreated datePublished" datetime="2022-12-23T15:58:47+08:00">2022-12-23</time>
             </span>
 
           
@@ -211,28 +211,14 @@
 <li><p>清算： 需要计算头寸抵押率，并检查贷款抵押率是否低于预定义的清算门槛。如果发现贷款抵押率不足，调用协议的清算方法，保障抵押品足以偿还贷款。</p>
 </li>
 </ol>
-<h3 id="如何实现智能合约自动化"><a href="#如何实现智能合约自动化" class="headerlink" title="如何实现智能合约自动化"></a>如何实现智能合约自动化</h3><p><img src="https://assets-global.website-files.com/5f75fe1dce99248be5a892db/6386135c43ba9f1fa970d1f9_robo-vault-diagram-1.webp" alt="智能合约自动化的难点"><br>解决方法就是做一个触发器。</p>
-<ol>
-<li>比如基于时间触发，这个很容易让人联想到linux里的定时任务crontab。</li>
-<li>比如基于自定义条件触发。这个自定义条件可以是ETH价格大于等于1600USD或者某个地址余额大于等于10ETH</li>
-</ol>
-<p>自然地会想到自己写一个后端服务去触发就好啦。那么这个是最优解吗？</p>
-<ol>
-<li>你想做一个web3项目，当然是在乎这个项目的去中心化程度。那么一个项目的去中心化程度取决于什么？根据“短板效应”，那么就是你项目中最不去中心化的那一个环节决定了项目整体去中心化程度。虽然有点拗口，可以多读一遍感受下哈。如果你的项目是靠一个后端服务去支撑，未必是一个最优方式。</li>
-<li>链上交易不同于链下发送请求。有时候你需要面对链上的极端情况，比如一个很火的NFT mint导致gas price骤增，你是不是要时刻关心你的交易是否有被打包</li>
-<li>团队会需要分配准备的运维团队来维护这个后端服务，保证服务可靠，稳定。</li>
-</ol>
-<p>能优雅地应对好这些问题，就做到智能合约的自动化触发。</p>
-<h3 id="墙裂推荐Chainlink-Automation"><a href="#墙裂推荐Chainlink-Automation" class="headerlink" title="墙裂推荐Chainlink Automation"></a>墙裂推荐Chainlink Automation</h3><p><img src="https://blog.chain.link/wp-content/uploads/2022/03/Keepers-GIF.gif" alt="Chainlink Automation 实现"></p>
-<p>上图很好展示了automation的构成。<br>1、链下模拟链上状态，来判断在upkeep合约中check up方法中预设的条件是否满足。<br>2、如果结果“否”，那么下个区块继续检查这个条件<br>3、如果结果“是”，执行upkeep合约中的peform up方法</p>
-<p>如果你是要做简单的定时触发，Chainlink Automation也直接提供注册定时任务的方法，按照<a target="_blank" rel="noopener" href="https://blog.chain.link/chainlink-automation-job-scheduler-zh/">如下操作</a>就可以注册定时任务</p>
-<h3 id="Chainlink-Automation执行效果"><a href="#Chainlink-Automation执行效果" class="headerlink" title="Chainlink Automation执行效果"></a>Chainlink Automation执行效果</h3><p>用数据说话，</p>
-<h4 id="在使用前"><a href="#在使用前" class="headerlink" title="在使用前"></a>在使用前</h4><p>项目方自己搭建了自动化服务和其他的第三方自动化服务，可以看到83%的交易是由自己搭建的服务触发<br><img src="https://i.imgur.com/pznyiKr.png" alt="使用Chainlink Automation前"></p>
-<h4 id="引入Chainlink-Automation之后"><a href="#引入Chainlink-Automation之后" class="headerlink" title="引入Chainlink Automation之后"></a>引入Chainlink Automation之后</h4><p>81%的交易是由Chainlink Automation触发，18%由自己搭建了自动化服务触发。<br><img src="https://i.imgur.com/PcNUugW.png" alt="使用Chainlink Automation后"></p>
-<p>为什么能更高效地触发合约呢？因为<br>执行去中心化——Chainlink建立了去中心化且透明的Automation池，可以更安全、及时地执行智能合约，为团队节省大量时间，并降低了人为干预或中心化服务器存在的风险。</p>
-<p>成本低——Chainlink Automation网络拥有多个gas费优化功能，可以降低dApp自动化的成本；并建立了轮转机制筛选节点，避免gas价格战并稳定用户成本。</p>
-<p>链下计算——Chainlink Automation可以执行高级的链下计算并生成智能合约可验证的calldata，因此可以为开发者可实现高级功能，并且不需要额外的信任假设。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/12/23/SmartContract-automation/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
